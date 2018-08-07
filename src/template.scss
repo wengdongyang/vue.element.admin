@@ -1,0 +1,15 @@
+.ec-header {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  padding: 10px 20px;
+  &-welcomeMsg {
+    line-height: 40px;
+    height: 40px;
+    flex: 1;
+  }
+  &-btnList {
+    width: 56px;
+    padding: 4px 0;
+  }
+}

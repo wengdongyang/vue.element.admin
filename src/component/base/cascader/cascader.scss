@@ -1,0 +1,22 @@
+/*
+* @Author: wdy
+* @Date:   2018-06-25 09:39:36
+* @Last Modified by:   wdy
+* @Last Modified time: 2018-06-25 09:39:57
+*/
+
+.ec-cascader {
+  font-size: 0;
+  label {
+    font-size: 14px;
+    line-height: 32px;
+
+    display: inline-block;
+
+    min-width: 80px;
+    height: 32px;
+    padding-right: 10px;
+
+    text-align: right;
+  }
+}

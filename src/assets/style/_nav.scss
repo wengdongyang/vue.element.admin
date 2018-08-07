@@ -1,0 +1,49 @@
+/*
+* @Author: wdy
+* @Date:   2018-06-20 11:22:12
+* @Last Modified by:   wdy
+* @Last Modified time: 2018-06-20 11:54:26
+*/
+
+.nav {
+  display: flex;
+
+  margin-bottom: 0;
+  padding-left: 0;
+
+  list-style: none;
+
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  font-size: 14px;
+  line-height: 28px;
+
+  display: block;
+
+  padding: 5px 10px;
+
+  text-decoration: none;
+
+  color: #495057;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #dee2e6;
+  .nav-item {
+    margin-bottom: -1px;
+  }
+  .nav-link {
+    border: 1px solid transparent;
+    &:focus,
+    &:hover {
+      border-color: #e9ecef #e9ecef #dee2e6;
+    }
+  }
+  .nav-link.active {
+    color: #409eff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    background-color: #fff;
+  }
+}
