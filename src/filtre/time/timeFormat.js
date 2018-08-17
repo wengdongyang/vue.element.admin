@@ -8,7 +8,7 @@
 const formatNumber = n => {
   n = n.toString();
   return n[1] ? n : '0' + n;
-}
+};
 
 const formatDate = newDate => {
   let _newDate = new Date(newDate);
@@ -16,7 +16,7 @@ const formatDate = newDate => {
   let month = _newDate.getMonth() + 1;
   let day = _newDate.getDate();
   return [year, month, day].map(formatNumber).join('/');
-}
+};
 
 const formatTime = newDate => {
   let _newDate = new Date(newDate);
@@ -24,7 +24,7 @@ const formatTime = newDate => {
   let minute = _newDate.getMinutes();
   let second = _newDate.getSeconds();
   return [hour, minute, second].map(formatNumber).join(':');
-}
+};
 
 const formatDateTime = newDate => {
   let _newDate = new Date(newDate);
@@ -35,7 +35,7 @@ const formatDateTime = newDate => {
   let minute = _newDate.getMinutes();
   let second = _newDate.getSeconds();
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-}
+};
 
 export {
   formatDate,

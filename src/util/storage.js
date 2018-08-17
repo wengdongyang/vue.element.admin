@@ -5,6 +5,7 @@
  * @Last Modified time: 2018-06-13 10:00:23
  */
 const storage = window.sessionStorage;
+
 export function getStorage(key = '') {
   try {
     return JSON.parse(storage.getItem(key))
@@ -12,12 +13,15 @@ export function getStorage(key = '') {
     return ''
   }
 }
+
 export function setStorage(key = '', val) {
   storage.setItem(key, JSON.stringify(val))
 }
+
 export function removeStorage(key = '') {
   storage.removeItem(key)
 }
+
 export function clearStorage() {
   return storage.clear()
 }

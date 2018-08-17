@@ -9,7 +9,7 @@ import * as types from '@/store/mutation-types';
 
 const state = {
   asynRouter: [] // 异步路由
-}
+};
 
 const getters = {
   asynRouter: state => state.asynRouter // 异步路由
@@ -20,17 +20,17 @@ const mutations = {
   [types.SET_ASYN_ROUTER](state, asynRouter) {
     state.asynRouter = asynRouter;
   }
-}
+};
 
 const actions = {
   // 异步路由
-  setAsynRouter({ commit, state }, asynRouter) {
+  setAsynRouter({commit, state}, asynRouter) {
     return new Promise((resolve) => {
       commit(types.SET_ASYN_ROUTER, asynRouter);
       resolve()
     })
   }
-}
+};
 
 export default {
   state,

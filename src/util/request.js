@@ -5,16 +5,16 @@
  * @Last Modified time: 2018-06-21 18:51:44
  */
 import axios from 'axios';
-import { Loading } from 'element-ui';
+import {Loading} from 'element-ui';
 
-import { requestConfig } from '@/assets/js/config.js';
+import {requestConfig} from '@/assets/js/config.js';
 
 axios.interceptors.request.use((config) => {
   console.warn('url:', config['url']);
   return config
 }, (error) => {
   return Promise.reject(error)
-})
+});
 // 请求完成后的拦截器
 axios.interceptors.response.use((response) => {
   console.warn('data', response['data']);
@@ -33,13 +33,14 @@ function successState(res) {
   // ...隐藏loading
   // console.log(res)
 }
+
 const request = (opts, params) => {
   // http默认配置
   let httpDefaultOpts = {
     method: requestConfig.method,
     url: opts.url
   };
-  console.warn('params', params)
+  console.warn('params', params);
   let loadingInstance;
   loadingInstance = Loading.service({
     lock: true,
@@ -47,7 +48,7 @@ const request = (opts, params) => {
     spinner: 'el-icon-loading',
     background: 'rgba(0, 0, 0, 0.7)'
   });
-  let promise = new Promise(function(resolve, reject) {
+  let promise = new Promise(function (resolve, reject) {
     axios(httpDefaultOpts).then((res) => {
       setTimeout(() => {
         loadingInstance.close();
@@ -74,8 +75,8 @@ const requestNoloading = (opts, params) => {
     method: requestConfig.method,
     url: opts.url
   };
-  console.warn('params', params)
-  let promise = new Promise(function(resolve, reject) {
+  console.warn('params', params);
+  let promise = new Promise(function (resolve, reject) {
     axios(httpDefaultOpts).then((res) => {
       if (res['code'] === 0) {
         successState(res);
@@ -90,4 +91,4 @@ const requestNoloading = (opts, params) => {
   });
   return promise
 };
-export { request, requestNoloading }
+export {request, requestNoloading}

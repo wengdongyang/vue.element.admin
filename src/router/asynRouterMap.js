@@ -17,6 +17,10 @@ const asynRouterMap = [{
     path: 'randomPaperList',
     component: () =>
       import ('@/view/paper/randomPaperList.vue')
+  }, {
+    path: 'normalPaperEdit/:paperId',
+    component: () =>
+      import ('@/view/paper/normalPaperEdit.vue')
   }]
 }, {
   path: '/activityList',

@@ -6,8 +6,9 @@
  */
 
 import * as types from '@/store/mutation-types';
-import { Message } from 'element-ui';
+import {Message} from 'element-ui';
 import router from '@/router/index.js';
+
 /**
  * [isAlivedNav 判断一个nav是否存在]
  * @param  {[type]}  subnav     [description]
@@ -40,7 +41,7 @@ const state = {
     pathUrl: '/dashboard'
   }], // 子菜单列表
   historyNavList: ['/dashboard'] // 历史菜单
-}
+};
 
 const getters = {
   subNavList: state => state.subNavList, // 子菜单列表
@@ -102,22 +103,22 @@ const mutations = {
       path: _subNavUrl
     });
   }
-}
+};
 
 const actions = {
   // 新增某个菜单
-  addNav({ commit, state }, subNav) {
+  addNav({commit, state}, subNav) {
     commit(types.ADD_NAV, subNav);
   },
   // 删除某个菜单
-  delNav({ commit, state }, subNav) {
+  delNav({commit, state}, subNav) {
     commit(types.DEL_NAV, subNav);
   },
   // 激活某个菜单
-  activeNav({ commit, state }, subNav) {
+  activeNav({commit, state}, subNav) {
     commit(types.ACTIVE_NAV, subNav);
   }
-}
+};
 
 export default {
   state,

@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import VuexPersistence from 'vuex-persist';
 
-import { getStorage, setStorage } from '@/util/storage.js';
+import {getStorage, setStorage} from '@/util/storage.js';
 
 import login from './login/login.js';
 

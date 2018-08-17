@@ -4,8 +4,19 @@
       {{ config.label }}
     </label>
     <!-- 远程select -->
-    <el-select v-model="modelData" :placeholder="config.placeholder" :disabled="config.disabled" :remote-method="remoteMethod" :loading="loading" @change="changeModelCaptionData" size="small" filterable clearable remote>
-      <el-option v-for="el in options" :key="el.value" :label="el.label" :value="el.value">
+    <el-select
+      v-model="modelData"
+      :placeholder="config.placeholder"
+      :disabled="config.disabled"
+      :remote-method="remoteMethod"
+      :loading="loading"
+      @change="changeModelCaptionData"
+      size="small"
+      filterable clearable remote>
+      <el-option
+        v-for="el in options" :key="el.value"
+        :label="el.label"
+        :value="el.value">
       </el-option>
     </el-select>
   </div>

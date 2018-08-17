@@ -20,7 +20,7 @@ const baseComponents = [
   ecRemoteSelect,
   ecNormalCascader,
   ecTablePagination
-]
+];
 // 业务组件
 const busComponents = [];
 // 组件合集

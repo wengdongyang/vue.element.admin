@@ -9,7 +9,7 @@ import store from './store/index.js';
 import router from './router/index.js';
 import asynRouterMap from './router/asynRouterMap.js';
 
-import { getSessionId } from './util/auth.js'
+import {getSessionId} from './util/auth.js'
 
 // 定义白名单，可以直接进入
 const whiteList = ['/login'];
@@ -18,7 +18,7 @@ const whiteList = ['/login'];
 router.beforeEach((to, from, next) => {
   if (getSessionId()) {
     if (to.path === '/login') {
-      next({ path: '/' })
+      next({path: '/'})
     } else {
       if (store.getters.asynRouter.length === 0 || !store.getters.asynRouter) {
         let asynRouter = store.getters.userPower['asynRouter'];
@@ -28,7 +28,7 @@ router.beforeEach((to, from, next) => {
            */
           let finallyasynRouter = asynRouterMap || asynRouter;
           router.addRoutes(finallyasynRouter) // 动态添加可访问路由表
-          next({ ...to, replace: true }) // hack方法 确保addRoutes已完成 ,set the replace: true so the navigation will not leave a history record
+          next({...to, replace: true}) // hack方法 确保addRoutes已完成 ,set the replace: true so the navigation will not leave a history record
         })
       } else {
         next()
@@ -43,4 +43,4 @@ router.beforeEach((to, from, next) => {
       })
     }
   }
-})
+});

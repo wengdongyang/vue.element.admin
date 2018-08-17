@@ -4,7 +4,8 @@
  * @Last Modified by:   wdy
  * @Last Modified time: 2018-06-25 14:42:15
  */
-import { deepClone } from 'outils';
+import {deepClone} from 'outils';
+
 /**
  * [mixinsConfig description]
  * @param  {Object} defaultConfig [description]

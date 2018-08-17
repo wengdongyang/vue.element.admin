@@ -2,16 +2,16 @@
 * @Author: wdy
 * @Date:   2018-06-25 09:39:36
 * @Last Modified by:   wdy
-* @Last Modified time: 2018-06-25 09:39:57
+* @Last Modified time: 2018-06-27 11:41:19
 */
 
 .ec-cascader {
   font-size: 0;
   label {
+    display: inline-block;
+
     font-size: 14px;
     line-height: 32px;
-
-    display: inline-block;
 
     min-width: 80px;
     height: 32px;

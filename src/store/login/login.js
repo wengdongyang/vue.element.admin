@@ -11,7 +11,7 @@ const state = {
   menu: [], // 左侧菜单
   sessionId: '', // 用户id
   userPower: {} // 用户权限树，包括menu,asynRouter,粒度级按钮控制
-}
+};
 
 const getters = {
   menu: state => state.menu, // 左侧菜单
@@ -32,22 +32,22 @@ const mutations = {
   [types.SET_USER_POWER](state, userPower) {
     state.userPower = userPower;
   }
-}
+};
 
 const actions = {
   // 左侧菜单
-  setMenu({ commit, state }, menu) {
+  setMenu({commit, state}, menu) {
     commit(types.SET_MENU, menu);
   },
   // 用户id
-  setSessionId({ commit, state }, sessionId) {
+  setSessionId({commit, state}, sessionId) {
     commit(types.SET_SESSION_ID, sessionId);
   },
   // 用户权限树，包括menu,asynRouter,粒度级按钮控制
-  setUserPower({ commit, state }, userPower) {
+  setUserPower({commit, state}, userPower) {
     commit(types.SET_USER_POWER, userPower);
   }
-}
+};
 
 export default {
   state,

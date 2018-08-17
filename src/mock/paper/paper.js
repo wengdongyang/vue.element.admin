@@ -8,11 +8,11 @@ const normalPaperList = {
   total: 400,
   'rows|20': [{
     'paperId|+1': 1,
-    paperName: function() {
+    paperName: function () {
       return `正式题卷测试${this.paperId}`
     },
     paperType: 1,
-    paperStatus: function() {
+    paperStatus: function () {
       return Math.round(Math.random())
     },
     createdDate: '@datetime',
@@ -24,17 +24,17 @@ const randomPaperList = {
   total: 400,
   'rows|20': [{
     'paperId|+1': 1,
-    paperName: function() {
+    paperName: function () {
       return `随机题卷测试${this.paperId}`
     },
     paperType: 0,
-    paperStatus: function() {
+    paperStatus: function () {
       return Math.round(Math.random())
     },
     createdDate: '@datetime',
     updatedDate: '@datetime'
   }]
-}
+};
 export {
   normalPaperList,
   randomPaperList
